@@ -1,0 +1,4 @@
+google-news-feed
+torch
+transformers
+pandas

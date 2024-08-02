@@ -1,4 +1,5 @@
-from fetch_news import fetch_news
+from fetch_news import fetch_google_news
+
 
 
 
@@ -9,4 +10,6 @@ from fetch_news import fetch_news
 
 
 if __name__=='__main__':
-    print('sentiment analysis')
+    sentiment_analysis()
+
+    
