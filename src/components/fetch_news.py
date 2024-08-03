@@ -1,46 +1,32 @@
 import os
 import pandas as pd
-from google_news_feed import GoogleNewsFeed
+from google_news_feed import GoogleNewsFeed # type: ignore
 from dataclasses import dataclass
 
 @dataclass
 class NewsStorageConfig:
-    news_storage_path: str=os.path.join('../artifacts', 'news_headlines.txt')
-
+    news_storage_path: str=os.path.join('artifacts', 'news_headlines.csv')
 
 class NewsIngestion: 
     def __init__(self):
         self.ingestion_config=NewsStorageConfig()
-        self.news = pd.DataFrame(GoogleNewsFeed(language='en',country='US').top_headlines())
+        self.news_headlines = self.fetch_news()
+        self.store_news()
 
-    def news_filter_today():
-        '''
-        filter out only today published news
-        '''
-        ## Convert dateTime of post to date format 
-        ## Filter by today's date 
-        pass
-
-
-    def news_ingestion(self):
-        '''
-        save news to a file
-        '''
-        try:
-            print(self.ingestion_config)
-            #os.makedirs(self.ingestion_config, exist_ok=True)
-        except:
-            pass 
+    def fetch_news(self):
+        df = pd.DataFrame(GoogleNewsFeed(language='en',country='US').top_headlines())
+        return df
     
-    def print_news(self):
-        print(self.news['pubDate'])
-        
+    def store_news(self):
+        os.makedirs(os.path.dirname(self.ingestion_config.news_storage_path), exist_ok=True)
+        self.news_headlines['title'].to_csv(self.ingestion_config.news_storage_path, index=False, header=True)
 
-
+    def storage_path(self):
+        return str(self.ingestion_config.news_storage_path)
 
 if __name__=='__main__':
-    print('fetch news')
-    news = NewsIngestion()
-    news.print_news()
-    #news.news_ingestion()
+    news=NewsIngestion()
+    print(news.storage_path())
+    #news.store_news()  
+
     
