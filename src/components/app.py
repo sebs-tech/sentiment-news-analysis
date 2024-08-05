@@ -43,15 +43,25 @@ if __name__=='__main__':
     for each in range(0, df.shape[0]):
         if (df.iloc[each]['sentiment'] == 1):
             st.write(f":red[{df.iloc[each]['title']}]")
+            st.link_button("Caution: Negative sentiment", str(df.iloc[each]['link']))
+            st.write("---")
             
         if (df.iloc[each]['sentiment'] == 2):
-            st.write(f":violet[{df.iloc[each]['title']}]")
+            st.write(f":red[{df.iloc[each]['title']}]")
+            st.link_button("Caution: Barely acceptable sentiment", str(df.iloc[each]['link']))
+            st.write("---")
 
         if (df.iloc[each]['sentiment'] == 3):
             st.write(f":orange[{df.iloc[each]['title']}]")
+            st.link_button("Neutral news sentiment", str(df.iloc[each]['link']))
+            st.write("---")
             
         if (df.iloc[each]['sentiment'] == 4):
-            st.write(f":blue[{df.iloc[each]['title']}]")
+            st.write(f":green[{df.iloc[each]['title']}]")
+            st.link_button("Otimistic news sentiment", str(df.iloc[each]['link']))
+            st.write("---")
             
         if (df.iloc[each]['sentiment'] == 5):
             st.write(f":green[{df.iloc[each]['title']}]")
+            st.link_button("Good news sentiment", str(df.iloc[each]['link']))
+            st.write("---")
