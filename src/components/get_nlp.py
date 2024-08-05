@@ -12,10 +12,10 @@ from configuration import AppConfig
 if __name__=='__main__':
     news = AppConfig()
     
-    # Fetch NLP tokenizer
+    # Fetch and store NLP tokenizer
     tokenizer = AutoTokenizer.from_pretrained(news.get_nlp_model_name())
     tokenizer.save_pretrained(news.get_nlp_tokenizer_path())
     
-    # Fetch NLP model
+    # Fetch and store NLP model
     model = AutoModelForSequenceClassification.from_pretrained(news.get_nlp_model_name())
     model.save_pretrained(news.get_nlp_model_path())
