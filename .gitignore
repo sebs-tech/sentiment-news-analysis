@@ -165,4 +165,4 @@ cython_debug/
 
 # Nlp 
 nlp
-data/*
+data/
