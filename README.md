@@ -14,4 +14,9 @@ cd sentiment-news-analysis
 pip install -r requirements.txt
 ```
 
+## Docker 
+The docker is available at dockerhub
+```
+https://hub.docker.com/r/sebstech/google-news-sa
+```
 
