@@ -38,7 +38,7 @@ docker run -p 8080:8080 google-news-sa
 
 
 ## Credits 
-[Alexey Pelykh}(https://alexey-pelykh.com/) for constant support on software architecture / engineering.
+[Alexey Pelykh](https://alexey-pelykh.com/) for constant support on software architecture / engineering.
 
 
 ## License
