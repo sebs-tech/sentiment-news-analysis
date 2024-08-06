@@ -28,11 +28,11 @@ def fetch_google_news():
 if __name__=='__main__':
     config = AppConfig()
     # Fetch and store google news
-    '''
+
     fetch_google_news()
 
     gsa = GoogleSentimentAnalysis()
-    '''
+    
     
     
     st.title('Google News Sentiment Analysis')
@@ -41,7 +41,7 @@ if __name__=='__main__':
     
     #st.dataframe(df)
     
-    '''
+    
     df = pd.read_csv(config.sentiment_news_storage_path)
     
     for each in range(0, df.shape[0]):
@@ -70,4 +70,4 @@ if __name__=='__main__':
             st.link_button("Good news sentiment", str(df.iloc[each]['link']))
             st.write("---")
             
-    '''
+    
