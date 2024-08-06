@@ -20,3 +20,7 @@ The docker is available at dockerhub
 https://hub.docker.com/r/sebstech/google-news-sa
 ```
 
+Run the docker with:
+```
+docker run -p 8080:8080 google-news-sa
+```
