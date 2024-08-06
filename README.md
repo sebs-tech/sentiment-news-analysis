@@ -3,6 +3,17 @@
 Google-news-sa is an application that uses Natural Language Processing (NLP) to analyze the 
 sentiment of Google News headlines. For the sentiment analysis the app uses *'nlptown/bert-base-multilingual-uncased-sentiment'* model and tokenizer from Huggingface.com
 
+
+## How it works
+The application produces a list of headlines, with a button below warning the user about the sentimental intepretation of the headline. 
+The categorization falls basically in 3 categories: 
+* Bad
+* Neutral
+* Good / ok
+
+  
+
+
 ## How to install 
 
 ```
