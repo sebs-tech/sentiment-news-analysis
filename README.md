@@ -9,3 +9,9 @@ sentiment of Google News headlines. For the sentiment analysis the app uses *'nl
 https://github.com/sebs-tech/sentiment-news-analysis.git
 ```
 
+```
+cd sentiment-news-analysis
+pip install -r requirements.txt
+```
+
+
