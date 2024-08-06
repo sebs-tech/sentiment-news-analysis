@@ -11,7 +11,7 @@ The categorization falls basically in 3 categories:
 * Neutral
 * Good / ok
 
-  
+By clicking on the button bellow the headline, the user can read the full article. 
 
 
 ## How to install 
@@ -35,3 +35,11 @@ Run the docker with:
 ```
 docker run -p 8080:8080 google-news-sa
 ```
+
+
+## Credits 
+[Alexey Pelykh}(https://alexey-pelykh.com/) for constant support on software architecture / engineering.
+
+
+## License
+Unknown yet. 
