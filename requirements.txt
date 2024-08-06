@@ -1,7 +1,7 @@
 google-news-feed
 torch
 transformers
-pandas
-llmware
+#pandas
+#llmware
 streamlit
 

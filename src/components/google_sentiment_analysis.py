@@ -1,6 +1,5 @@
 from configuration import AppConfig
 from transformers import AutoTokenizer, AutoModelForSequenceClassification 
-from configuration import AppConfig
 import torch
 import pandas as pd
 import os
@@ -15,7 +14,9 @@ class GoogleSentimentAnalysis:
 
 
     def get_sentiment_analysis(self, tokenization):
-        tokens = self.tokenizer.encode(tokenization, return_tensors='pt')
+        tokens = self.tokenizer.encode(tokenization, 
+                                       return_tensors='pt'
+                                    )
         results = self.model(tokens)
         return int(torch.argmax(results.logits))+1
 
