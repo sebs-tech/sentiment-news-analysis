@@ -42,4 +42,4 @@ docker run -p 8080:8080 google-news-sa
 
 
 ## License
-Unknown yet. 
+To Do. 
