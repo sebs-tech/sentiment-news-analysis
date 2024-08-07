@@ -17,7 +17,7 @@ By clicking on the button bellow the headline, the user can read the full articl
 ## How to install 
 
 ```
-https://github.com/sebs-tech/sentiment-news-analysis.git
+git clone https://github.com/sebs-tech/sentiment-news-analysis.git
 ```
 
 ```
